@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import CustomLink from "../CustomLink/CustomLink";
 
 const Header = () => {
 	return (
@@ -12,25 +13,28 @@ const Header = () => {
 					</Navbar.Brand>
 					<Nav className="ms-auto">
 						<Nav.Link>
-							<Link to="/" className="text-white text-decoration-none">
+							<CustomLink
+								to="/"
+								className="text-white text-decoration-none"
+							>
 								Home
-							</Link>
+							</CustomLink>
 						</Nav.Link>
 						<Nav.Link>
-							<Link
+							<CustomLink
 								to="about"
 								className="text-white text-decoration-none"
 							>
 								About
-							</Link>
+							</CustomLink>
 						</Nav.Link>
 						<Nav.Link>
-							<Link
+							<CustomLink
 								to="friends"
 								className="text-white text-decoration-none"
 							>
 								Friends
-							</Link>
+							</CustomLink>
 						</Nav.Link>
 
 						{/* <Nav.Link href="/friends">Friends</Nav.Link> */}
