@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Friends = () => {
-	return (
-		<div>
-			<h2>This is Friends Page here</h2>
-			<p>My all friends is here with my first job joining date</p>
-		</div>
-	);
+	const [friends, setFriends] = useState([]);
+
+	useEffect(() => {
+		fetch("https://jsonplaceholder.typicode.com/users")
+			.then((res) => res.json())
+			.then((data) => setFriends(data));
+	}, []);
+
+	return <div></div>;
 };
 
 export default Friends;
